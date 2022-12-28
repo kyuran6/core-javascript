@@ -12,6 +12,7 @@ console.log(typeof null);
 console.log(typeof undefined);
 
 // 3. 따옴표를 사용해 묶은 텍스트(큰", 작은', 역`)
+let nickName = "tiger"
 let message1="hello"
 let message2='tiger'
 let message3=`안녕 내 이름은 ${nickName}야`;
