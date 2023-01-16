@@ -1,4 +1,5 @@
 
+
 import { 
   diceAnimation, 
   disableElement, 
@@ -23,12 +24,32 @@ import {
 // 4. visible 활성 유틸 함수 만들기
 // 5. toggleState 유틸 함수 만들기 
 
+// [ 레코드 템플릿 뿌리기 ]
+// 1. renderRecordListItem 함수 만들기
+// 2. HTML 템플릿 만들기
+// 3. 템플릿 뿌리기 
+
+
+
 // 배열의 구조 분해 할당 
 const [rollingDiceButton,recordButton,resetButton] = getNodes('.buttonGroup > button');
 
 const recordListWrapper = getNode('.recordListWrapper')
 
 
+
+
+function renderRecordListItem(){
+  
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* event                                                                      */
+/* -------------------------------------------------------------------------- */
 
 const handleRollingDice = (() => {
  
@@ -59,7 +80,9 @@ const handleRollingDice = (() => {
 
 const handleRecord =()=>{
   
-  visibleElement(recordListWrapper)
+  visibleElement(recordListWrapper);
+
+  renderRecordListItem();
 }
 
 const handleReset = () => {
@@ -74,9 +97,3 @@ recordButton.addEventListener('click',handleRecord)
 resetButton.addEventListener('click',handleReset)
 
 // let eventOff = bindEvent(rollingDiceButton,'click',handlerRollingDice);
-
-
-
-
-
-
