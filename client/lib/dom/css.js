@@ -15,6 +15,8 @@ export function addClass(node,className){
 
 }
 
+
+
 // 변경하기 : 대상의 클래스를 지운다.
 export function removeClass(node,className){
   if(typeof node === 'string') node = getNode(node);
@@ -83,4 +85,5 @@ export const css = (node,prop,value) => {
   return !value ? getCss(node,prop) : setCss(node,prop,value) 
 }
 
+  
   
