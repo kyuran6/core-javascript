@@ -1,36 +1,32 @@
-console.log('aa');
+
+
+import { diceAnimation, getNode } from "./lib/index.js";
+
+//[ 주사위 굴리기 ]
+//1. dice 애니메이션 불러오기
+//2. bindEvent 유틸함수 만들기
+//3. handleRollingDice 함수 만들고 토글로 애니메이션 제어하기
+//4. 변수 보호를 위한 클로저 + IIFE 사용하기
+
+//diceAnimation()
 
 
 
-import { attr } from "../dom/attr.js";
-import { getNode } from '../dom/getNode.js'
+const rollingDiceButton = getNode('.buttonGroup > button:nth-child(1)')
 
-const cube = getNode('#cube');
+setInterval(() => {
+  console.log('안녕');
 
+},1000);
 
+clearInterval(id)
+// clearTimeout(id)
 
-let random;
-gsap.to(cube,{duration:1,rotationX:100,rotationY:-100,ease:'back(10)'});
-
-
-export function diceAnimation (){
-
-
-  random = gsap.utils.random([0,1,2,3,4,5]);
-
-  function complete(){
-		attr(cube,'data-dice',random + 1)
-  }
-
-  const rotationValue = [
-    [0,0], // 1
-    [0,-90], // 2
-    [-90,0], // 3
-    [90,0], // 4
-    [0,90], // 5
-    [-180,0], // 6
-  ]
-
-  gsap.to(cube,{ease:'linear',duration:0.2,z:-100,rotationX:rotationValue[random][0],rotationY:rotationValue[random][1],onComplete:complete})
+const handlerRollingDice = () => {
 
 }
+
+
+rollingDiceButton.addEventListener('click',handlerRollingDice)
+
+// let eventOff = bindEvent(rollingDiceButton, 'click',handlerRollingDice);
