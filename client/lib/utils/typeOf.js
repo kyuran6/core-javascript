@@ -46,3 +46,18 @@ export const isElement = node => node.nodeType === document.ELEMENT_NODE
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
